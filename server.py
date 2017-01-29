@@ -23,7 +23,7 @@ class myHandler(BaseHTTPRequestHandler):
 		cur.execute("SELECT name FROM asignaturas")
 		nrand=randint(0,5)
 
-		ip = os.popen('ip addr show wlo1 | grep "\<inet\>" | awk \'{ print $2 }\' | awk -F "/" \'{ print $1 }\'').read().strip()
+		ip = os.popen('ip addr show ens3 | grep "\<inet\>" | awk \'{ print $2 }\' | awk -F "/" \'{ print $1 }\'').read().strip()
 
 		self.wfile.write("<html><head><title>Practica Final</title></head>")
 		self.wfile.write("<body>")
